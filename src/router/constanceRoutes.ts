@@ -9,7 +9,7 @@ const constantRoutes: RouteRecordRaw[] = [
             title: '首页',
         },
         children: [],
-        component: () => import('@/views/gpt/gpt.vue'),
+        component: () => import('@/views/demo/demo.vue'),
     },
     {
         path: '/demo',
