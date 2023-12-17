@@ -4,21 +4,89 @@ const constantRoutes: RouteRecordRaw[] = [
     {
         path: '/',
         name: 'Home',
-        redirect: '/demo',
+        redirect: '/index',
         meta: {
             title: '首页',
         },
         children: [],
-        component: () => import('@/views/demo/demo.vue'),
+        component: () => import('@/views/index/index.vue'),
     },
     {
-        path: '/demo',
-        name: 'Demo',
+        path: '/index',
+        name: 'Index',
         meta: {
-            title: 'demo',
+            title: '首页',
         },
-        component: () => import('@/views/demo/demo.vue'),
+        children: [
+            {
+                path: '/article',
+                name: 'Article',
+                meta: {
+                    title: '文章列表',
+                },
+                component: () => import('@/views/article/article.vue'),
+            },
+            {
+                path: '/message',
+                name: 'Message',
+                meta: {
+                    title: '留言板',
+                },
+                component: () => import('@/views/message/message.vue'),
+            },
+            {
+                path: '/appoint',
+                name: 'Appoint',
+                meta: {
+                    title: '在线预约',
+                },
+                component: () => import('@/views/appoint/appoint.vue'),
+            },
+            {
+                path: '/teacher',
+                name: 'Teacher',
+                meta: {
+                    title: '教师介绍',
+                },
+                component: () => import('@/views/teacher/teacher.vue'),
+            },
+        ],
+        component: () => import('@/views/index/index.vue'),
     },
-]
+    {
+        path: '/register',
+        name: 'Register',
+        meta: {
+            title: '注册',
+        },
+        component: () => import('@/views/user/register.vue'),
+    },
+    {
+        path: '/login',
+        name: 'Login',
+        meta: {
+            title: '登录',
+        },
+        component: () => import('@/views/user/login.vue'),
+    },
+    {
+        path: '/articleDetail',
+        name: 'ArticleDetail',
+        meta: {
+            title: '文章明细',
+        },
+        component: () => import('@/views/article/articleDetail.vue'),
+    },
+
+    {
+        path: '/user',
+        name: 'User',
+        meta: {
+            title: '个人信息',
+        },
+        component: () => import('@/views/user/user.vue'),
+    }
+ ]
+
 
 export {constantRoutes}
