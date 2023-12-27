@@ -6,12 +6,29 @@ export class Url{
     static loginWithPassword = this.baseUrl+ '/user/loginWithPassword';
     static loginWithValidCode = this.baseUrl+ '/user/loginWithValidCode';
     static getUserInfo = this.baseUrl+ '/user/getUserInfo';
-    static register = this.baseUrl+ '/user/add';
-    static getValidCode = this.baseUrl+ '/user/getValidCode';
-    static recharge = this.baseUrl+ '/user/recharge';
-    static zfbCallback = this.baseUrl+ '/user/zfbCallback';
-    static upload = this.baseUrl+ '/gpt/upload';
-    static loadGptData = this.baseUrl+ '/gpt/loadGptData';
-    static weixinLogin = this.baseUrl+ '/user/weixinLogin';
+    static uploadUrl = this.baseUrl+ '/file/upload';
+
+    static app_getAppData = this.baseUrl+ '/app/getAppData';
+
+    static student_add = this.baseUrl+ '/studentApi/add';
+    static student_login = this.baseUrl+ '/studentApi/login';
+    static student_detail = this.baseUrl+ '/studentApi/detail';
+    static student_changePassword = this.baseUrl+ '/studentApi/changePassword';
+    static student_updateHead = this.baseUrl+ '/studentApi/updateHead';
+
+
+    static teacher_list = this.baseUrl+ '/teacherApi/getPageList';
+
+    static article_listWithType = this.baseUrl+ '/articleApi/getListWithType';
+    static article_detail = this.baseUrl+ '/articleApi/detail';
+    static article_list = this.baseUrl+ '/articleApi/getPageList';
+
+    static messageBoard_list = this.baseUrl+ '/messageBoardApi/getPageList';
+    static messageBoard_add = this.baseUrl+ '/messageBoardApi/add';
+
+    static appoint_add = this.baseUrl+ '/appointApi/add';
+    static appoint_list = this.baseUrl+ '/appointApi/getPageList';
+    static appoint_getUserAppoints = this.baseUrl+ '/appointApi/getUserAppoints';
+
 
 }

@@ -6,6 +6,7 @@ import {setupStore} from '@/store'
 import {setupNaive} from '@/plugin/naive'
 
 
+
 const bootstrap = async () => {
     const app = createApp(App)
     // 初始化 store

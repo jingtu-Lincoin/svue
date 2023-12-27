@@ -14,6 +14,7 @@ const constantRoutes: RouteRecordRaw[] = [
     {
         path: '/index',
         name: 'Index',
+        redirect: '/body',
         meta: {
             title: '首页',
         },
@@ -50,6 +51,22 @@ const constantRoutes: RouteRecordRaw[] = [
                 },
                 component: () => import('@/views/teacher/teacher.vue'),
             },
+            {
+                path: '/articleDetail/:id',
+                name: 'ArticleDetail',
+                meta: {
+                    title: '文章明细',
+                },
+                component: () => import('@/views/article/articleDetail.vue'),
+            },
+            {
+                path: '/body',
+                name: 'Body',
+                meta: {
+                    title: '文章明细',
+                },
+                component: () => import('@/views/index/Body.vue'),
+            },
         ],
         component: () => import('@/views/index/index.vue'),
     },
@@ -69,14 +86,7 @@ const constantRoutes: RouteRecordRaw[] = [
         },
         component: () => import('@/views/user/login.vue'),
     },
-    {
-        path: '/articleDetail',
-        name: 'ArticleDetail',
-        meta: {
-            title: '文章明细',
-        },
-        component: () => import('@/views/article/articleDetail.vue'),
-    },
+
 
     {
         path: '/user',

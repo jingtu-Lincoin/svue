@@ -3,10 +3,10 @@ import {defineStore} from 'pinia'
 
 interface info {
     id: number
-    username: string
-    tel: number | string
-    avatarUrl: string
-    gender: number | string
+    name: string
+    tel: string
+    userHead: string
+    gender: string
 }
 
 interface UserState {
@@ -21,9 +21,9 @@ const useUserStore = defineStore({
             token: '',
             userInfo: {
                 id: 0,
-                username: '',
+                name: '',
                 tel: '',
-                avatarUrl: '',
+                userHead: '',
                 gender: '',
             },
         }
@@ -39,6 +39,9 @@ const useUserStore = defineStore({
         setUserinfo(userInfo: info) {
             this.userInfo = {...userInfo}
         },
+        logout() {
+            this.userInfo= null;
+        }
     },
     //开启持久化
     persist: {
