@@ -64,6 +64,7 @@ let student = reactive({
       // message.success('注册成功');
       // router.replace('/login');
       student.password = md5(student.password);
+      student.rePassword = md5(student.rePassword);
 
       add(student).then(res => {
         console.log(res);
